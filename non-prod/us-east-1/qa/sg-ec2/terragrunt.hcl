@@ -24,7 +24,7 @@ terraform {
 }
 
 inputs = {
-  name        = "sg-${local.environment_vars.locals.environment}"
+  name        = "${local.environment_vars.locals.environment}-sg"
   environment = local.environment_vars.locals.environment
   vpc_id      = dependency.vpc.outputs.vpc_id
 }
